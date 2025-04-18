@@ -5,4 +5,6 @@ int positiveIntInput();
 
 int intInput();
 
+void nameInput();
+
 #endif

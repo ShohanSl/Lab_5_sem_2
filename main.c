@@ -14,7 +14,7 @@
 #include "./headers/inputFuncs.h"
 #include "./headers/stackFuncs.h"
 
-void firstTask(){ // Первое задание
+void findMaxNegInt(){ // Первое задание
     int command, maxLength, currentLength=0;
     printf("\nEnter a maximum length of stack:\n");
     maxLength=positiveIntInput();
@@ -43,7 +43,7 @@ void firstTask(){ // Первое задание
     }
 }
 
-void secondTask(){  // Второе задание
+void mergeTwoStacks(){  // Второе задание
     ELEMENT* firstTop = malloc(sizeof(ELEMENT));
     if (firstTop==NULL){
         printf("\nThere is any error with the memory\n");
@@ -88,19 +88,21 @@ void secondTask(){  // Второе задание
     }
 }
 
-void thirdTask(){  // Третье задание
-
+void calculator(){  // Третье задание
+    char* fileName = (char*)malloc(sizeof(char));
+    printf("\nInput file name:\n");
+    nameInput(fileName);
 }
 
 void main(){        // Меню
     int command;
     while(1){
-        printf("\nMENU\n\nChoose operation:\n1 - first task\n2 - second task\
-\n3 - third task\n0 - exit");
+        printf("\nMENU\n\nChoose operation:\n1 - find maximum negative integer in stack\n2 - merge two stacks\
+\n3 - calculator\n0 - exit");
         command=positiveIntInput();
-        if (command==1) firstTask();
-        else if (command==2) secondTask();
-        else if (command==3) thirdTask();
+        if (command==1) findMaxNegInt();
+        else if (command==2) mergeTwoStacks();
+        else if (command==3) calculator();
         else if (command==0) return;
         else printf("\nUnknown command. Please try again\n");
     }
