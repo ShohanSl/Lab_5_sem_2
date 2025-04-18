@@ -24,7 +24,7 @@ void addElement(ELEMENT* top, int maxLength, int* currentLength){   // Доба�
     return;
 }
 
-void addElementInDescending(ELEMENT* top, int maxLength, int* currentLength){
+void addElementInDescending(ELEMENT* top, int maxLength, int* currentLength){  // Добавление элемента по убыванию
     if (*currentLength==maxLength){
         printf("\nIt's already a maximum number of elements\n");
         return;
@@ -54,7 +54,7 @@ void addElementInDescending(ELEMENT* top, int maxLength, int* currentLength){
     return;
 }
 
-void addElementInAscending(ELEMENT* top, int maxLength, int* currentLength){
+void addElementInAscending(ELEMENT* top, int maxLength, int* currentLength){  // Добавление элемента по возрастанию
     if (*currentLength==maxLength){
         printf("\nIt's already a maximum number of elements\n");
         return;
@@ -116,7 +116,7 @@ void maxNegInt(ELEMENT* top, int currentLength){    // Поиск наиболь
     return;
 }
 
-int inpFirstStack(ELEMENT** firstTop, int firstLength){
+int inpFirstStack(ELEMENT** firstTop, int firstLength){  // Ввод первого стека для второго задания
     if (firstLength!=0){
         printf("\nStack is already inputed\n");
         return firstLength;
@@ -138,7 +138,7 @@ int inpFirstStack(ELEMENT** firstTop, int firstLength){
     }
 }
 
-int inpSecStack(ELEMENT** secondTop, int secondLength){
+int inpSecStack(ELEMENT** secondTop, int secondLength){  // Ввод второго стека для второго задания
     if (secondLength!=0){
         printf("\nStack is already inputed\n");
         return secondLength;
@@ -160,7 +160,7 @@ int inpSecStack(ELEMENT** secondTop, int secondLength){
     }
 }
 
-void createThirdStack(ELEMENT* firstTop, ELEMENT* secondTop, ELEMENT** thirdTop, int firstLength, int secondLength) {
+void createThirdStack(ELEMENT* firstTop, ELEMENT* secondTop, ELEMENT** thirdTop, int firstLength, int secondLength) {  // Создание третьего стека
     ELEMENT* firstPtr = firstTop->next;
     ELEMENT* secondPtr = secondTop->next;
     int thirdLength = 0;
@@ -218,7 +218,7 @@ void createThirdStack(ELEMENT* firstTop, ELEMENT* secondTop, ELEMENT** thirdTop,
     showElements(*thirdTop, thirdLength);
 }
 
-void freeStack(ELEMENT* top) {
+void freeStack(ELEMENT* top) {  // Освобождение памяти от стека
     ELEMENT* ptr = top;
     while (ptr != NULL) {
         ELEMENT* toDelete = ptr;
