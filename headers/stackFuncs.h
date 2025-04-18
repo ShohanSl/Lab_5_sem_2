@@ -8,8 +8,20 @@ typedef struct StackElement{
 
 void addElement();
 
+void addElementInDescending();
+
+void addElementInAscending();
+
 void showElements();
 
 void maxNegInt();
+
+int inpFirstStack();
+
+int inpSecStack();
+
+void createThirdStack();
+
+void freeStack();
 
 #endif
