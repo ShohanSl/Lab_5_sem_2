@@ -88,21 +88,14 @@ void mergeTwoStacks(){  // Второе задание
     }
 }
 
-void calculator(){  // Третье задание
-    char* fileName = (char*)malloc(sizeof(char));
-    printf("\nInput file name:\n");
-    nameInput(fileName);
-}
-
 void main(){        // Меню
     int command;
     while(1){
         printf("\nMENU\n\nChoose operation:\n1 - find maximum negative integer in stack\n2 - merge two stacks\
-\n3 - calculator\n0 - exit");
+\n0 - exit");
         command=positiveIntInput();
         if (command==1) findMaxNegInt();
         else if (command==2) mergeTwoStacks();
-        else if (command==3) calculator();
         else if (command==0) return;
         else printf("\nUnknown command. Please try again\n");
     }

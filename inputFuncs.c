@@ -79,33 +79,3 @@ int intInput(){     // Ввод любого целого числа
     }
     return res;
 }
-
-// void nameInput(char* name){  //Ввод текста в виде динамического массива
-//     int i = 0;
-//     char inp, txt=".txt";
-//     while(1){
-//         if (i==0){
-//             printf("\n\n>>");
-//         }
-//         inp=getchar();
-//         if (inp=='\n'&&i!=0){
-//             break;
-//         }
-//         else if (inp=='\n'){
-//             printf("\nInput error. Please try again");
-//         }
-//         else{
-//             name[i]=inp;
-//             i++;
-//             name=(char*)realloc(name, (i+1)*sizeof(char));
-//             if (!name) {
-//                 printf("Memory allocation error\n");
-//                 return;
-//             }
-//         }
-//     }
-//     name=(char*)realloc(name, (i+4)*sizeof(char));
-//     for (int k=1; k<=3; k++){
-//         name[i+k]=
-//     }
-// }
